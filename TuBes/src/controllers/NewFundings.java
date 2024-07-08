@@ -74,7 +74,7 @@ public class NewFundings {
 
     private void loadFundingData() {
         try {
-            File inputFile = new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\funding.xml");
+            File inputFile = new File("C:\\Users\\User\\Downloads\\pull\\UnityFund\\TuBes\\src\\data\\funding.xml");
             if (!inputFile.exists()) {
                 System.out.println("Funding XML file not found.");
                 return;
@@ -158,7 +158,7 @@ public class NewFundings {
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\funding.xml"));
+            StreamResult result = new StreamResult(new File("C:\\Users\\User\\Downloads\\pull\\UnityFund\\TuBes\\src\\data\\funding.xml"));
             transformer.transform(source, result);
 
             System.out.println("XML file updated successfully.");

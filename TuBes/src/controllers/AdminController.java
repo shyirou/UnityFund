@@ -85,7 +85,7 @@ public class AdminController {
 
     private void loadFundingData() {
         try {
-            File inputFile = new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\funding.xml");
+            File inputFile = new File("C:\\Users\\User\\Downloads\\pull\\UnityFund\\TuBes\\src\\data\\funding.xml");
             if (!inputFile.exists()) {
                 System.out.println("Funding XML file not found.");
                 return;
@@ -112,7 +112,7 @@ public class AdminController {
 
     private void loadProjectData() {
         try {
-            File inputFile = new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\projects.xml");
+            File inputFile = new File("C:\\Users\\User\\Downloads\\pull\\UnityFund\\TuBes\\src\\data\\projects.xml");
             if (!inputFile.exists()) {
                 System.out.println("Projects XML file not found.");
                 return;

@@ -11,8 +11,8 @@ import java.util.List;
 
 public class XMLHandler {
 
-    public static final String STUDENT_FILE_PATH = "C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\user.xml";
-    public static final String ADMIN_FILE_PATH = "C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\admin.xml";
+    public static final String STUDENT_FILE_PATH = "C:\\Users\\User\\Downloads\\pull\\UnityFund\\TuBes\\src\\data\\user.xml";
+    public static final String ADMIN_FILE_PATH = "C:\\Users\\User\\Downloads\\pull\\UnityFund\\TuBes\\src\\data\\admin.xml";
 
     public static List<User> readUsers(String filePath) {
         List<User> users = new ArrayList<>();

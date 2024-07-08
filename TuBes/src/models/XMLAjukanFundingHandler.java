@@ -11,7 +11,7 @@ import java.util.List;
 
 public class XMLAjukanFundingHandler {
 
-    private static final String FILE_PATH = "C:\\Users\\LENOVO\\Downloads\\TuBes\\TuBes\\src\\data\\funding.xml";
+    private static final String FILE_PATH = "C:\\Users\\User\\Downloads\\pull\\UnityFund\\TuBes\\src\\data\\funding.xml";
 
     public static List<AjukanFunding> readFundings() {
         List<AjukanFunding> fundings = new ArrayList<>();
