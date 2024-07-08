@@ -63,7 +63,8 @@ public class AdminController {
 
     @FXML
     void klikFunding(ActionEvent event) {
-        // Add functionality for funding button
+        m.lihatDataFunding();
+        
     }
 
     @FXML
@@ -74,7 +75,7 @@ public class AdminController {
 
     @FXML
     void klikProject(ActionEvent event) {
-        // Add functionality for project button
+        m.lihatDataProject();
     }
 
     @FXML

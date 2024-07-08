@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import models.Project;
+
 import org.w3c.dom.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,63 +22,67 @@ import javafx.event.ActionEvent;
 
 import java.io.File;
 
-public class NewFundings {
+public class NewProject {
 
     @FXML
     private Button hapusLaporan;
 
     @FXML
-    private TableView<Funding> table;
+    private TableView<Project> table;
 
     @FXML
-    private TableColumn<Funding, String> colTitle;
+    private TableColumn<Project, String> colJudul;
 
     @FXML
-    private TableColumn<Funding, String> colTeamName;
+    private TableColumn<Project, String> colLatar;
 
     @FXML
-    private TableColumn<Funding, String> colBudget;
+    private TableColumn<Project, String> colTujuan;
 
     @FXML
-    private TableColumn<Funding, Integer> colLikes;
+    private TableColumn<Project, String> colNama;
 
-    private ObservableList<Funding> fundingList;
+    @FXML
+    private TableColumn<Project, String> colAnggota;
+
+    private ObservableList<Project> projectList;
 
     @FXML
     public void initialize() {
-        colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
-        colTeamName.setCellValueFactory(new PropertyValueFactory<>("teamName"));
-        colBudget.setCellValueFactory(new PropertyValueFactory<>("budget"));
-        colLikes.setCellValueFactory(new PropertyValueFactory<>("likes"));
+        colJudul.setCellValueFactory(new PropertyValueFactory<>("judulProject"));
+        colLatar.setCellValueFactory(new PropertyValueFactory<>("latarBelakang"));
+        colTujuan.setCellValueFactory(new PropertyValueFactory<>("tujuanKegiatan"));
+        colNama.setCellValueFactory(new PropertyValueFactory<>("namaTeam"));
+        colAnggota.setCellValueFactory(new PropertyValueFactory<>("anggotaTeam"));
 
-        fundingList = FXCollections.observableArrayList();
-        loadFundingData();
-        table.setItems(fundingList);
+        projectList = FXCollections.observableArrayList();
+        loadProjectData();
+        table.setItems(projectList);
 
         // Log for debugging
-        System.out.println("Funding list loaded: " + fundingList);
+        System.out.println("Project list loaded: " + projectList);
 
-        // Handle row selection to update the selected funding item
+        // Handle row selection to update the selected project item
         table.setOnMouseClicked(event -> {
             if (event.getClickCount() == 1) { // Single-click
                 int selectedIndex = table.getSelectionModel().getSelectedIndex();
                 if (selectedIndex >= 0) {
                     // Set the selected item to be deleted
-                    Funding selectedFunding = table.getSelectionModel().getSelectedItem();
-                    if (selectedFunding != null) {
+                    Project selectedProject = table.getSelectionModel().getSelectedItem();
+                    if (selectedProject != null) {
                         // Log for debugging
-                        System.out.println("Selected funding: " + selectedFunding);
+                        System.out.println("Selected project: " + selectedProject);
                     }
                 }
             }
         });
     }
 
-    private void loadFundingData() {
+    private void loadProjectData() {
         try {
-            File inputFile = new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\funding.xml");
+            File inputFile = new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\projects.xml");
             if (!inputFile.exists()) {
-                System.out.println("Funding XML file not found.");
+                System.out.println("Project XML file not found.");
                 return;
             }
 
@@ -85,23 +91,19 @@ public class NewFundings {
             Document doc = dBuilder.parse(inputFile);
             doc.getDocumentElement().normalize();
 
-            NodeList nList = doc.getElementsByTagName("funding");
+            NodeList nList = doc.getElementsByTagName("project");
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    String title = eElement.getElementsByTagName("title").item(0).getTextContent();
-                    String teamName = eElement.getElementsByTagName("teamName").item(0).getTextContent();
-                    String budget = eElement.getElementsByTagName("budget").item(0).getTextContent();
-                    int likes;
-                    try {
-                        likes = Integer.parseInt(eElement.getElementsByTagName("likes").item(0).getTextContent());
-                    } catch (NumberFormatException e) {
-                        likes = 0; // Default value or handle the error as needed
-                        System.out.println("Invalid number format in likes: " + eElement.getElementsByTagName("likes").item(0).getTextContent());
-                    }
-                    fundingList.add(new Funding(title, teamName, budget, likes));
+                    String judulProject = eElement.getElementsByTagName("judulProject").item(0).getTextContent();
+                    String latarBelakang = eElement.getElementsByTagName("latarBelakang").item(0).getTextContent();
+                    String tujuanKegiatan = eElement.getElementsByTagName("tujuanKegiatan").item(0).getTextContent();
+                    String namaTeam = eElement.getElementsByTagName("namaTeam").item(0).getTextContent();
+                    String anggotaTeam = eElement.getElementsByTagName("anggotaTeam").item(0).getTextContent();
+
+                    projectList.add(new Project(judulProject, latarBelakang, tujuanKegiatan, namaTeam, anggotaTeam));
                 }
             }
         } catch (Exception e) {
@@ -112,21 +114,21 @@ public class NewFundings {
     @FXML
     void btnHapusLaporan(ActionEvent event) {
         // Get selected item
-        Funding selectedItem = table.getSelectionModel().getSelectedItem();
+        Project selectedItem = table.getSelectionModel().getSelectedItem();
         if (selectedItem != null) {
             // Log for debugging
-            System.out.println("Removing funding: " + selectedItem);
+            System.out.println("Removing project: " + selectedItem);
 
             // Remove from TableView
             table.getItems().remove(selectedItem);
-            // Remove from fundingList
-            fundingList.remove(selectedItem);
+            // Remove from projectList
+            projectList.remove(selectedItem);
 
             // Update XML file
             updateXMLFile();
         } else {
             // Handle case where no item is selected
-            System.out.println("No funding selected to delete.");
+            System.out.println("No project selected to delete.");
         }
     }
 
@@ -138,19 +140,20 @@ public class NewFundings {
             Document doc = dBuilder.newDocument();
 
             // Root element
-            Element rootElement = doc.createElement("fundings");
+            Element rootElement = doc.createElement("projects");
             doc.appendChild(rootElement);
 
-            // Add each funding in fundingList to the XML
-            for (Funding funding : fundingList) {
-                Element fundingElement = doc.createElement("funding");
-                rootElement.appendChild(fundingElement);
+            // Add each project in projectList to the XML
+            for (Project project : projectList) {
+                Element projectElement = doc.createElement("project");
+                rootElement.appendChild(projectElement);
 
                 // Add child elements
-                createElement(doc, fundingElement, "title", funding.getTitle());
-                createElement(doc, fundingElement, "teamName", funding.getTeamName());
-                createElement(doc, fundingElement, "budget", funding.getBudget());
-                createElement(doc, fundingElement, "likes", String.valueOf(funding.getLikes()));
+                createElement(doc, projectElement, "judulProject", project.getJudulProject());
+                createElement(doc, projectElement, "latarBelakang", project.getLatarBelakang());
+                createElement(doc, projectElement, "tujuanKegiatan", project.getTujuanKegiatan());
+                createElement(doc, projectElement, "namaTeam", project.getNamaTeam());
+                createElement(doc, projectElement, "anggotaTeam", project.getAnggotaTeam());
             }
 
             // Write the content into XML file
@@ -158,7 +161,7 @@ public class NewFundings {
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\funding.xml"));
+            StreamResult result = new StreamResult(new File("C:\\Users\\lenovo\\Downloads\\TuBes\\TuBes\\src\\data\\projects.xml"));
             transformer.transform(source, result);
 
             System.out.println("XML file updated successfully.");

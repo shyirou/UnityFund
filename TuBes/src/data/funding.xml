@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<fundings/>
+<fundings>
+    <funding>
+        <title>Project Mbappe</title>
+        <teamName>asdf</teamName>
+        <budget>asfd</budget>
+        <likes>11</likes>
+    </funding>
+    <funding>
+        <title>asd</title>
+        <background>asd</background>
+        <objectives>asd</objectives>
+        <teamName>asd</teamName>
+        <teamMembers>asd</teamMembers>
+        <budget>asd</budget>
+        <likes>asd</likes>
+    </funding>
+    <funding>
+        <title>asd</title>
+        <background>asd</background>
+        <objectives>asd</objectives>
+        <teamName>asd</teamName>
+        <teamMembers>asd</teamMembers>
+        <budget>asd</budget>
+        <likes>asd</likes>
+    </funding>
+</fundings>

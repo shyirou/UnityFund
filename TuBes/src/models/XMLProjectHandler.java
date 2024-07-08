@@ -9,22 +9,22 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XMLAjukanFundingHandler {
+public class XMLProjectHandler {
 
-    private static final String FILE_PATH = "C:\\Users\\LENOVO\\Downloads\\TuBes\\TuBes\\src\\data\\funding.xml";
+    private static final String FILE_PATH = "C:\\Users\\lenovo\\Documents\\TuBes\\TuBes\\src\\data\\project.xml";
 
-    public static List<AjukanFunding> readFundings() {
-        List<AjukanFunding> fundings = new ArrayList<>();
+    public static List<Project> readProjects() {
+        List<Project> projects = new ArrayList<>();
         try {
             File file = new File(FILE_PATH);
-            if (!file.exists()) return fundings;
+            if (!file.exists()) return projects;
 
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(file);
             doc.getDocumentElement().normalize();
 
-            NodeList nodeList = doc.getElementsByTagName("funding");
+            NodeList nodeList = doc.getElementsByTagName("project");
 
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);
@@ -36,18 +36,16 @@ public class XMLAjukanFundingHandler {
                     String background = element.getElementsByTagName("background").item(0).getTextContent();
                     String teamMembers = element.getElementsByTagName("teamMembers").item(0).getTextContent();
                     String objectives = element.getElementsByTagName("objectives").item(0).getTextContent();
-                    String budget = element.getElementsByTagName("budget").item(0).getTextContent();
-                    String likes = element.getElementsByTagName("likes").item(0).getTextContent();
-                    fundings.add(new AjukanFunding(title, teamName, background, teamMembers, objectives, budget, likes));
+                    projects.add(new Project(title, teamName, background, teamMembers, objectives));
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return fundings;
+        return projects;
     }
 
-    public static void writeFunding(String title, String background, String objectives, String teamName, String teamMembers, String budget, String likes) {
+    public static void writeProject(String title, String background, String objectives, String teamName, String teamMembers) {
         try {
             File file = new File(FILE_PATH);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -59,42 +57,34 @@ public class XMLAjukanFundingHandler {
                 doc.getDocumentElement().normalize();
             } else {
                 doc = dBuilder.newDocument();
-                Element rootElement = doc.createElement("fundings");
+                Element rootElement = doc.createElement("projects");
                 doc.appendChild(rootElement);
             }
 
             Element root = doc.getDocumentElement();
-            Element fundingElement = doc.createElement("funding");
+            Element projectElement = doc.createElement("project");
 
             Element titleElement = doc.createElement("title");
             titleElement.appendChild(doc.createTextNode(title));
-            fundingElement.appendChild(titleElement);
+            projectElement.appendChild(titleElement);
 
             Element backgroundElement = doc.createElement("background");
             backgroundElement.appendChild(doc.createTextNode(background));
-            fundingElement.appendChild(backgroundElement);
+            projectElement.appendChild(backgroundElement);
 
             Element objectivesElement = doc.createElement("objectives");
             objectivesElement.appendChild(doc.createTextNode(objectives));
-            fundingElement.appendChild(objectivesElement);
+            projectElement.appendChild(objectivesElement);
 
             Element teamNameElement = doc.createElement("teamName");
             teamNameElement.appendChild(doc.createTextNode(teamName));
-            fundingElement.appendChild(teamNameElement);
+            projectElement.appendChild(teamNameElement);
 
             Element teamMembersElement = doc.createElement("teamMembers");
             teamMembersElement.appendChild(doc.createTextNode(teamMembers));
-            fundingElement.appendChild(teamMembersElement);
+            projectElement.appendChild(teamMembersElement);
 
-            Element budgetElement = doc.createElement("budget");
-            budgetElement.appendChild(doc.createTextNode(budget));
-            fundingElement.appendChild(budgetElement);
-
-            Element likesElement = doc.createElement("likes");
-            likesElement.appendChild(doc.createTextNode(likes));
-            fundingElement.appendChild(likesElement);
-
-            root.appendChild(fundingElement);
+            root.appendChild(projectElement);
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
@@ -105,5 +95,10 @@ public class XMLAjukanFundingHandler {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void writeFunding(String text, String text2, String text3, String text4, String text5) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'writeFunding'");
     }
 }

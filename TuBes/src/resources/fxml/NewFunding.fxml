@@ -10,10 +10,10 @@
       <Button fx:id="hapusLaporan" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnHapusLaporan" text="Hapus Laporan" />
       <TableView fx:id="table" layoutX="23.0" layoutY="77.0" prefHeight="303.0" prefWidth="543.0">
         <columns>
-          <TableColumn fx:id="colTitle" prefWidth="150.0" text="Title" />
-          <TableColumn fx:id="colTeamName" prefWidth="150.0" text="Team Name" />
-          <TableColumn fx:id="colBudget" prefWidth="150.0" text="Budget" />
-          <TableColumn fx:id="colLikes" prefWidth="150.0" text="Likes" />
+          <TableColumn fx:id="colTitle" prefWidth="116.0" text="Title" />
+          <TableColumn fx:id="colTeamName" prefWidth="127.0" text="Team Name" />
+          <TableColumn fx:id="colBudget" prefWidth="157.0" text="Budget" />
+          <TableColumn fx:id="colLikes" prefWidth="142.0" text="Likes" />
         </columns>
       </TableView>
    </children>

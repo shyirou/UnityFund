@@ -90,11 +90,16 @@
             <Font name="SansSerif Regular" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="iduploadImage" layoutX="801.0" layoutY="628.0" mnemonicParsing="false" onAction="#clickUploadImage" style="-fx-background-color: #37B7C3;" text="Upload Gambar" textFill="WHITE" />
+      <Button fx:id="iduploadImage" layoutX="793.0" layoutY="521.0" mnemonicParsing="false" onAction="#clickUploadImage" style="-fx-background-color: #37B7C3;" text="Upload Gambar" textFill="WHITE" />
       <ImageView fitHeight="145.0" fitWidth="238.0" layoutX="591.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imageAsset/image%20(2)%201.png" />
          </image>
       </ImageView>
+      <Label layoutX="785.0" layoutY="490.0" text="Upload Image">
+         <font>
+            <Font name="SansSerif Regular" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -180,6 +180,33 @@ public class ViewFactory {
       
     }
 
+    public void lihatDataFunding() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/resources/fxml/NewFunding.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL); // This line makes the pop-up modal
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void lihatDataProject() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/resources/fxml/NewProject.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL); // This line makes the pop-up modal
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
    

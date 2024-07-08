@@ -10,6 +10,8 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import models.XMLAjukanFundingHandler;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -80,7 +82,6 @@ public class ProSub1Controller {
 
     private File selectedImageFile;
     private static final int MAX_PROJECTS = 2;
-    private int currentProjects = 0;
 
     @FXML
     void LogOut(ActionEvent event) {
@@ -194,6 +195,9 @@ public class ProSub1Controller {
             // Tampilkan alert sukses
             showAlert("Upload Successful", "Data proyek dan gambar berhasil diunggah!");
 
+            // Hapus konten dari TextField setelah berhasil mengunggah
+            clearFields();
+
         } catch (ParserConfigurationException | TransformerException | org.xml.sax.SAXException | IOException e) {
             e.printStackTrace();
         }
@@ -219,5 +223,13 @@ public class ProSub1Controller {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    private void clearFields() {
+        namaTeam.clear();
+        judulProject.clear();
+        latarBelakang.clear();
+        anggotaTeam.clear();
+        tujuanKegiatan.clear();
     }
 }

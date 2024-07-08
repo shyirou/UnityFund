@@ -40,6 +40,18 @@
             <Image url="@../imageAsset/image%20(2)%201.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="anchorPane" layoutX="223.0" layoutY="154.0" prefHeight="638.0" prefWidth="1051.0" />
+      <AnchorPane fx:id="anchorPane" layoutX="495.0" layoutY="165.0" prefHeight="626.0" prefWidth="778.0" />
+      <Button layoutX="248.0" layoutY="165.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="238.0" style="-fx-background-color: trnaspartent; -fx-border-color: black;" />
+      <ImageView fitHeight="63.0" fitWidth="57.0" layoutX="262.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/image%2015.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="336.0" layoutY="193.0" text="Nutric Team">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="248.0" layoutY="251.0" mnemonicParsing="false" onAction="#hapusChat" style="-fx-background-color: #37B7C3;" text="hapus chat" textFill="WHITE" />
    </children>
 </AnchorPane>

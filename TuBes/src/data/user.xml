@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<users>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><users>
     <user>
         <username>user1</username>
         <password>pass1</password>
@@ -28,4 +27,4 @@
         <username>koku</username>
         <password>koku</password>
     </user>
-</users>
+<funding><title>asd</title><background>asd</background><objectives>asd</objectives><teamName>asd</teamName><teamMembers>asd</teamMembers><budget>asd</budget><likes>asd</likes></funding></users>
