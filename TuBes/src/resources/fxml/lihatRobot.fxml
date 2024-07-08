@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="710.0" style="-fx-background-color: #EBF4F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="15.0" layoutY="132.0" prefHeight="159.0" prefWidth="679.0" text="Empat robot karya mahasiswa Fakultas Teknologi Industri Universitas Islam Indonesia (FTI UII) Yogyakarta akan tampil pada Kontes Robot Indonesia (KRI) 2018 Regional 3 di Universitas PGRI Semarang, Senin-Rabu (16-18/4/2018). Tim Unisi Robotics 2018 yang terdiri dari 18 mahasiswa dilepas Wakil Rektor III, Ir. Agus Taufiq, MSc di Hall FTI UII, dan didampingi Dekan FTI, Dr Imam Djati Widodo, Jumat (13/4/2018).Dijelaskan dosen pembimbing Izzati Muhimmah, Ph.D, keempat robot FTI UII adalah Pejuang Hijrah, Unisi Arsilia, Admiral Unisi, dan Artisilia. Robot Pejuang Hijrah akan tampil pada katagori Kontes Robot ABU Indonesia (KRAI); Robot Unisi Arsilia pada katagori Kontes Robot Pemadam Api Indonesia (KRPAI) Berkaki; Robot Admiral Unisi pada katagori Kontes Robot Sepak Bola Indonesia (KRSBI) Beroda; dan Artisilia tampil pada katagori Kontes Robot Seni Tari Indonesia (KRSTI)." textAlignment="JUSTIFY" wrapText="true" />
+   </children>
+</AnchorPane>

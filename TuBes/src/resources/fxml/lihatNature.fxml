@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="710.0" style="-fx-background-color: #EBF4F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="147.0" prefHeight="130.0" prefWidth="682.0" text="International Youth Conference Expedition Chapter 2 ini diselenggarakan oleh Yayasan Indonesian Youth and Culture (NATURE), yang merupakan Non-Government Organization atau yang biasa dikenal dengan istilah NGO. Sebelumnya, mahasiswi Program Studi Ekonomi Islam juga pernah meraih Best Paper dalam acara ini yaitu Fitriani. Acara ini berisikan berbagai kegiatan untuk mengembangkan potensi dan kreativitas para pemuda, seperti Campus Visit, International Conference, City Tour, KBRI Visit, Meet Student Abroad, dan ditutup dengan Awarding." wrapText="true" />
+   </children>
+</AnchorPane>

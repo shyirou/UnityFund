@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Project1Controller">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/bg-home.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Project" layoutX="71.0" layoutY="300.0" mnemonicParsing="false" onAction="#klikProject" style="-fx-background-color: transparent;" text="Project">
+         <font>
+            <Font name="SansSerif Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="Collab" layoutX="71.0" layoutY="401.0" mnemonicParsing="false" onAction="#klikCollab" style="-fx-background-color: transparent;" text="Collaboration">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="Funding" layoutX="71.0" layoutY="497.0" mnemonicParsing="false" onAction="#klikFunding" style="-fx-background-color: transparent;" text="Funding">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="ProjectSubmission" layoutX="71.0" layoutY="590.0" mnemonicParsing="false" onAction="#klikSub" style="-fx-background-color: transparent;" text="Project Submission">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="LogOut" layoutX="6.0" layoutY="730.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="63.0" prefWidth="213.0" style="-fx-background-color: #37B7C3;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbnamaProfile" layoutX="41.0" layoutY="135.0" text="hai, Raffi">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="41.0" layoutY="33.0" prefHeight="82.0" prefWidth="90.0">
+         <children>
+            <ImageView fitHeight="95.0" fitWidth="110.0" layoutX="-10.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imageAsset/img-profile.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="anchorKotak" layoutX="247.0" layoutY="172.0" prefHeight="614.0" prefWidth="1024.0">
+         <children>
+            <HBox fx:id="hboxGambar" layoutX="-1.0" layoutY="298.0" prefHeight="302.0" prefWidth="676.0" />
+            <ImageView fitHeight="291.0" fitWidth="675.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imageAsset/KotakVer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="620.0" fitWidth="293.0" layoutX="693.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imageAsset/kotakHor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="255.0" fitWidth="333.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imageAsset/imgRobot.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="315.0" fitWidth="268.0" layoutX="705.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imageAsset/imgNutric.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="354.0" layoutY="187.0" mnemonicParsing="false" onAction="#infoRobot" prefHeight="24.0" prefWidth="150.0" style="-fx-background-color: #37B7C3;" text="Lihat info lebih lanjut" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font></Button>
+            <Button layoutX="423.0" layoutY="217.0" mnemonicParsing="false" onAction="#klikAsk" prefHeight="53.0" prefWidth="195.0" style="-fx-background-color: #37B7C3;" text="Ask for join collaboration" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font></Button>
+            <Button layoutX="354.0" layoutY="217.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="66.0" style="-fx-background-color: #37B7C3;" />
+            <Label layoutX="354.0" layoutY="17.0" prefHeight="63.0" prefWidth="286.0" text="Kontes Robot ABU Indonesia (KRAI)" textFill="#37b7c3" wrapText="true">
+               <font>
+                  <Font name="SansSerif Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="354.0" layoutY="75.0" prefHeight="114.0" prefWidth="294.0" text="Tim Robotics Unisi 2018 ini akan akan tampil pada katagori Kontes Robot ABU Indonesia (KRAI); Robot Unisi Arsilia pada katagori Kontes Robot Pemadam Api Indonesia (KRPAI) Berkaki; Robot Admiral Unisi pada katagori Kontes Robot Sepak Bola Indonesia (KRSBI) Beroda." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="707.0" layoutY="503.0" mnemonicParsing="false" onAction="#infoNutric" prefHeight="24.0" prefWidth="150.0" style="-fx-background-color: #37B7C3;" text="Lihat info lebih lanjut" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="776.0" layoutY="533.0" mnemonicParsing="false" onAction="#klikAsk" prefHeight="53.0" prefWidth="195.0" style="-fx-background-color: #37B7C3;" text="Ask for join collaboration" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="707.0" layoutY="533.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="66.0" style="-fx-background-color: #37B7C3;" />
+            <Label layoutX="706.0" layoutY="333.0" prefHeight="131.0" prefWidth="262.0" text="Nutric (Nutrition Control) sebagai solusi menangani stunting dan malnutrisi di Indonesia." textFill="#37b7c3" wrapText="true">
+               <font>
+                  <Font name="SansSerif Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="370.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imageAsset/like.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="724.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imageAsset/like.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="145.0" fitWidth="238.0" layoutX="591.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/image%20(2)%201.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

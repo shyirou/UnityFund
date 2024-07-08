@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="KotakVer" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.KotakVerController">
+   <children>
+      <ImageView fx:id="bgKotakVer" fitHeight="291.0" fitWidth="675.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/KotakVer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageKotak" fitHeight="255.0" fitWidth="333.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/imgRobot.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="judulProject" contentDisplay="TOP" layoutX="354.0" layoutY="18.0" prefHeight="80.0" prefWidth="286.0" text="Kontes Robot ABU Indonesia (KRAI)" textFill="#37b7c3" wrapText="true">
+         <font>
+            <Font name="SansSerif Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="tujuanProject" layoutX="357.0" layoutY="76.0" prefHeight="128.0" prefWidth="310.0" text="Tim Robotics Unisi 2018 ini akan akan tampil pada katagori Kontes Robot ABU Indonesia (KRAI); Robot Unisi Arsilia pada katagori Kontes Robot Pemadam Api Indonesia (KRPAI) Berkaki; Robot Admiral Unisi pada katagori Kontes Robot Sepak Bola Indonesia (KRSBI) Beroda." wrapText="true">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font></Label>
+      <Button fx:id="lihatInfo" layoutX="358.0" layoutY="200.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="126.0" style="-fx-background-color: #37b7c3;" text="Lihat info lebih lanjut" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="AskFor" layoutX="404.0" layoutY="231.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="162.0" style="-fx-background-color: #37b7c3;" text="Ask for join collaboration" textFill="WHITE" />
+      <Button fx:id="like" layoutX="358.0" layoutY="231.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #37b7c3;" textFill="WHITE" />
+      <ImageView fx:id="beforelike" fitHeight="30.0" fitWidth="30.0" layoutX="364.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/like.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

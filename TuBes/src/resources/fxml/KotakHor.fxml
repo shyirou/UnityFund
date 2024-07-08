@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="KotakHor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.KotakHozController">
+   <children>
+      <ImageView fx:id="bgKontakHor" fitHeight="599.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/kotakHor.png" />
+         </image></ImageView>
+      <ImageView fx:id="imageKotak" fitHeight="315.0" fitWidth="268.0" layoutX="12.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/imgNutric.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="like" layoutX="14.0" layoutY="545.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #37B7C3;" textFill="WHITE" />
+      <Button fx:id="lihatInfo" layoutX="14.0" layoutY="507.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="129.0" style="-fx-background-color: #37B7C3;" text="Lihat Info lebih lanjut" textFill="WHITE" />
+      <Button fx:id="askFor" layoutX="65.0" layoutY="545.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="162.0" style="-fx-background-color: #37B7C3;" text="Ask for join collaboration" textFill="WHITE" />
+      <Label fx:id="judulProject" layoutX="13.0" layoutY="335.0" prefHeight="114.0" prefWidth="268.0" text="Nutric (Nutrition Control) sebagai solusi menangani stunting dan malnutrisi di Indonesia." textFill="#37b7c3" wrapText="true">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="beforeLike" fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imageAsset/like.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

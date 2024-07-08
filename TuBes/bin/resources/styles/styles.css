@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Rounded+Emplus:wght@400;700&display=swap'); 
+.font {
+    -fx-font-family: 'Rounded Emplus', sans-serif;
+}
+.rounded-anchor-pane {
+    
+    -fx-background-radius: 20; /* Radius latar belakang */
+  
+    -fx-border-width: 2; /* Lebar border */
+}
+.transparent-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.0); /* 100% transparan */
+}
+

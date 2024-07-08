@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="710.0" style="-fx-background-color: #EBF4F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="22.0" layoutY="106.0" prefHeight="212.0" prefWidth="666.0" text="Mahasiswa Universitas Islam Indonesia (UII) memunculkan startup Nutric (Nutrition Control) sebagai solusi menangani stunting dan malnutrisi di Indonesia. Tim yang terdiri dari Yullya Anggraini (Ilmu Komunikasi), Deden Fajri El Fikri (Ekonomi Pembangunan), dan Dicky Galuh Kurniawan (Teknik Informatika) ini berhasil melaju ke ajang Kewirausahaan Mahasiswa Indonesia (KMI) Award tahun 2022 di Universitas Pembangunan “Veteran” Jawa Timur. Nutric sendiri menawarkan layanan edukasi nutrisi melalui aplikasi digital teknologi.Berawal dari mengikuti kompetisi Inovasi Wirausaha Digital Mahasiswa (IWDM) yang diadakan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, mereka kemudian lolos mendapatkan pendanaan untuk mendirikan Startup dengan nama Nutric Company. Program IWDM sendiri memiliki tujuan agar terciptanya jiwa-jiwa entrepreneur di lingkungan perguruan tinggi dan melahirkan solusi-solusi inovatif dan kreatif untuk memajukan ekonomi digital Indonesia saat ini.Yullya Anggraini sebagai Chief Executive Officer (CEO) Nutric menjelaskan, seleksi IWDM dimulai dari tingkat universitas, dengan mempersiapkan ide bisnis digital, baik yang masih di tahap awal merintis ataupun bertumbuh. Hingga akhirnya terpilih lima startup digital mahasiswa yang mewakili UII di seleksi tingkat nasional." textAlignment="JUSTIFY" wrapText="true" />
+   </children>
+</AnchorPane>

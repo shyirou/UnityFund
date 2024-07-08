@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<users>
+    <user>
+        <username>user1</username>
+        <password>pass1</password>
+    </user>
+    <user>
+        <username>user2</username>
+        <password>pass2</password>
+    </user>
+    <user>
+        <username>koki</username>
+        <password>koki</password>
+    </user>
+    <user>
+        <username>Radity</username>
+        <password>jajs dja d</password>
+    </user>
+    <user>
+        <username>raffi</username>
+        <password>rafffi</password>
+    </user>
+    <user>
+        <username>radity</username>
+        <password>12345</password>
+    </user>
+    <user>
+        <username>koku</username>
+        <password>koku</password>
+    </user>
+</users>
