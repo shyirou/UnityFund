@@ -115,7 +115,7 @@ public class ProSub1Controller {
     void clickUpload(ActionEvent event) {
         try {
             // File XML yang akan disimpan
-            File xmlFile = new File("C:\\Users\\lenovo\\Documents\\UnityFund\\UnityFund\\src\\data\\projects.xml");
+            File xmlFile = new File("C:\\Users\\User\\Downloads\\TuBes\\UnityFund\\UnityFund\\src\\data\\projects.xml");
 
             DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();

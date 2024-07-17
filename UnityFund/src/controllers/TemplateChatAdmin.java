@@ -39,7 +39,7 @@ public class TemplateChatAdmin {
     public void initialize() {
         try {
             // Generate the XML file path based on the username
-            xmlFilePath = "C:\\Users\\lenovo\\Documents\\UnityFund\\UnityFund\\src\\data\\chatUser.xml";
+            xmlFilePath = "C:\\Users\\User\\Downloads\\TuBes\\UnityFund\\UnityFund\\src\\data\\chatUser.xml";
 
             documentBuilderFactory = DocumentBuilderFactory.newInstance();
             documentBuilder = documentBuilderFactory.newDocumentBuilder();

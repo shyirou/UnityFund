@@ -121,7 +121,7 @@ public class Project1Controller {
 
     private void loadProjects() {
         try {
-            File xmlFile = new File("C:\\Users\\lenovo\\Documents\\UnityFund\\UnityFund\\src\\data\\projects.xml");
+            File xmlFile = new File("C:\\Users\\User\\Downloads\\TuBes\\UnityFund\\UnityFund\\src\\data\\projects.xml");
             if (!xmlFile.exists()) {
                 System.out.println("File projects.xml tidak ditemukan");
                 return;

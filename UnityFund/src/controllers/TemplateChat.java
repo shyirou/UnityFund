@@ -29,7 +29,7 @@ public class TemplateChat {
     @FXML
     private TextField tfMessage;
 
-    private static final String XML_FILE_PATH = "C:\\Users\\lenovo\\Documents\\UnityFund\\UnityFund\\src\\data\\chatUser.xml";
+    private static final String XML_FILE_PATH = "C:\\Users\\User\\Downloads\\TuBes\\UnityFund\\UnityFund\\src\\data\\chatUser.xml";
     private DocumentBuilderFactory documentBuilderFactory;
     private DocumentBuilder documentBuilder;
     private Document document;
